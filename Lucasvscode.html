@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento Web</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+        
+        body {
+            background-color: #000;
+            color: #0ff;
+            font-family: 'Orbitron', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section {
+            padding: 80px 0;
+            text-shadow: 0 0 10px #0ff;
+        }
+        .navbar, .footer {
+            background-color: #111;
+        }
+        .btn-primary {
+            background-color: #00ffff;
+            border-color: #00ffff;
+            box-shadow: 0 0 10px #00ffff;
+        }
+        .btn-primary:hover {
+            background-color: #0ff;
+            box-shadow: 0 0 20px #0ff;
+        }
+        a.nav-link {
+            color: #0ff !important;
+        }
+        .glow {
+            text-shadow: 0 0 20px #0ff, 0 0 30px #0ff;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand glow" href="#home">Tecno Word</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#redes">Redes Sociais</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Fale Conosco</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="home" class="section text-center">
+        <div class="container">
+            <h1 class="glow">Bem-vindo ao Mundo da Tecnologia</h1>
+            <p>Aprenda HTML, CSS, JavaScript e muito mais!</p>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="section text-center">
+        <div class="container">
+            <h2 class="glow">Sobre</h2>
+            <p>Este site é dedicado ao ensino de desenvolvimento web, abordando HTML, CSS, JavaScript e muito mais.</p>
+        </div>
+    </section>
+
+    <!-- Redes Sociais -->
+    <section id="redes" class="section text-center">
+        <div class="container">
+            <h2 class="glow">Redes Sociais</h2>
+            <p>Acompanhe minhas redes para mais conteúdos sobre programação.</p>
+            <a href="#" class="btn btn-primary">Instagram</a>
+            <a href="#" class="btn btn-secondary">Twitter</a>
+            <a href="#" class="btn btn-danger">YouTube</a>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section text-center">
+        <div class="container">
+            <h2 class="glow">Fale Conosco</h2>
+            <form>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Nome">
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="E-mail">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" placeholder="Mensagem"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-3 footer text-light">
+        <p>&copy; 2025 Desenvolvimento Web | Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
